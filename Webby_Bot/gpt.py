@@ -10,7 +10,7 @@ class gpt(Command):
         super().__init__()
 
     def execute(self, message, attatchment_actions, activity):
-        openai.api_key = ("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")
+        openai.api_key = ("key")
         
         self.messages.append({"role": "user", "content": message})
         completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=self.messages)
